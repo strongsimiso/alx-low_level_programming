@@ -1,10 +1,5 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <fcntl.h>
-#include <unistd.h>
 #include <elf.h>
+#include "main.h"
 
 /**
  * print_addr - prints address
@@ -135,7 +130,6 @@ void print_data(char *ptr)
 	if (data == 2)
 		printf(", big endian\n");
 }
-
 /**
  * print_magic - prints magic info.
  * @ptr: magic.
@@ -201,7 +195,7 @@ int check_elf(char *ptr)
 }
 
 /**
- * main - check the code for Holberton School students.
+ * main - Displays the info in an ELF header file.
  * @argc: number of arguments.
  * @argv: arguments vector.
  * Return: Always 0.
